@@ -53,6 +53,22 @@
 </template>
 
 <script setup>
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+const firebaseConfig = {
+  apiKey: "AIzaSyBAGk3pEXVVCG0h-uInr3UTaYMINNB3RCw",
+  authDomain: "about-me-b08ae.firebaseapp.com",
+  projectId: "about-me-b08ae",
+  storageBucket: "about-me-b08ae.firebasestorage.app",
+  messagingSenderId: "200351097166",
+  appId: "1:200351097166:web:ed6f8cd29e2894ce01be1f",
+  measurementId: "G-HMJKC71GGF"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
 const downloadCV = () => {
 
   const cvUrl = '/Prajwal_Saraf_Resume.pdf'; 
